@@ -1,0 +1,27 @@
+{
+  "name": "wdi-10-hw11-express-index-show-poke",
+  "version": "1.0.0",
+  "description": "![ga](http://mobbook.generalassemb.ly/ga_cog.png)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamCharlesM/wdi-10-hw11-express-index-show-poke.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamCharlesM/wdi-10-hw11-express-index-show-poke/issues"
+  },
+  "homepage": "https://github.com/IamCharlesM/wdi-10-hw11-express-index-show-poke#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.4.0"
+  }
+}
