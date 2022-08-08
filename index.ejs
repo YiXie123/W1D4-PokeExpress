@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pokemans Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>See All The Pokemon!</h1>
+  </header>
+
+  <main>
+   <ul class="pokemon">
+        <% for (i = 0; i < pokemon.length; i++)  { %>
+          <li>
+             <a href="/pokemon/<%= i %>"><%= pokemon[i].name%></a> 
+          </li>
+        <% } %>  
+        <nav>
+          <a href="/pokemon/new">Create a New Pokemon</a>
+      </nav> 
+       
+   </ul>
+
+   {this.props.pokemon.map((pokemon,i) => {
+    return <li key={i}>
+        <a href={`/pokemon/${pokemon.id}`}>{pokemon.name}</a>
+        is { pokemon.readyToDelte? <span>It is ready to delete</span>: <span> It is not ready to delete </span>}
+        {/* Your Delete Form Goes Here  It's incomplete we will fix below*/}
+        <form>
+            <input type="submit" value="DELETE"/>
+        </form>
+    </li>
+})}
+
+<form action={`/pokemon/${pokemon._id}?_method=DELETE`} method="POST">
+
+<a href={`/pokemon/${pokemon._id}/edit`}>Edit This Pokemon</a>
+
+
+   
+  </main>
+
+  <footer>
+    _footerContent_
+  </footer>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
